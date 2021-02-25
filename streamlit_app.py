@@ -13,8 +13,8 @@ import numpy as np
 
 def read_image(path):
 
-    img = cv2.imread(path, cv2.IMREAD_COLOR)
-    return(img)
+    image = Image.open(path)
+    return(image)
 ##
 st.title("***Radar Based Activity Recognition using CNN-LSTM***")   
 
