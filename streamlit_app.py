@@ -12,7 +12,8 @@ import numpy as np
 #functions
 
 def resize_image(img_array):
-      
+      img_array=img_array.resize((64, 64), Image.ANTIALIAS)
+      img_array=img_array.resize(1,64,64,4)
       return(img_array)
     
 def read_image(path):
