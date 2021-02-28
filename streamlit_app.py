@@ -10,12 +10,14 @@ import random
 import numpy as np
 
 from keras.models import load_model
-def load_model_trained(img):
-    img_array = np.array(img)
-    img_array=img_array.resize(1,64,64,3)
+def load_model_trained(path):
+    image = Image.open(path)
+    resizedImage = image.resize((64,64))
+    zee1=np.asarray(zee)
+    zee1=zee1.reshape(1,64,64,3)
     model_loaded = load_model('./WEIGHTS/cnn_lstm.h5')
     st.write(model_loaded.summary())
-    prediction=model_loaded.predict(img_array)
+    prediction=model_loaded.predict(zee)
     
     return(prediction)
 
@@ -37,9 +39,8 @@ def read_image(path):
 def read_uploaded_image(path):
 
     image = Image.open(path)
-    img_64=image.resize((64, 64), Image.ANTIALIAS)
     img_array = np.array(image)
-    return(image,img_array,img_64)
+    return(image)
 
 st.title("***Radar Based Activity Recognition using CNN-LSTM***")      
 #sidebar
@@ -132,12 +133,12 @@ if(st.sidebar.button("Predict")):
         time.sleep(5)
         
     with col7:
-        Prediction_image,image_array,img_64=read_uploaded_image(image_predict)
+        Prediction_image=read_uploaded_image(image_predict)
         
         st.image(Prediction_image, caption='Uploaded Image',use_column_width=True)
 
     with col8:
-       prediction=load_model_trained(img_64)
+       prediction=load_model_trained(image_predict)
        with st.spinner('Predicting.....'):
            time.sleep(4)
        st.write(prediction)
