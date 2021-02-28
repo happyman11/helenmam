@@ -13,6 +13,7 @@ import numpy as np
 
 def resize_image(img_array):
       img_array=img_array.resize((64, 64), Image.ANTIALIAS)
+      img_array = np.array(img_array)
       img_array=img_array.resize(1,64,64,4)
       return(img_array)
     
