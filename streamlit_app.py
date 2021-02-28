@@ -128,6 +128,7 @@ if(st.sidebar.button("Predict")):
        
        with st.spinner('Predicting.....'):
            time.sleep(4)
+       st.image(image_array, caption='Uploaded Image',use_column_width=True)
              
 
     
