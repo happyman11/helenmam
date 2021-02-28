@@ -13,11 +13,11 @@ from keras.models import load_model
 def load_model_trained(path):
     image = Image.open(path)
     resizedImage = image.resize((64,64))
-    zee1=np.asarray(zee)
+    zee1=np.asarray(resizedImage)
     zee1=zee1.reshape(1,64,64,3)
     model_loaded = load_model('./WEIGHTS/cnn_lstm.h5')
     st.write(model_loaded.summary())
-    prediction=model_loaded.predict(zee)
+    prediction=model_loaded.predict(zee1)
     
     return(prediction)
 
