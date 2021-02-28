@@ -10,8 +10,10 @@ import random
 import numpy as np
 
 from keras.models import load_model
-def load_model_trained(image):
-    model_loaded = load_model('/content/model.h5')
+def load_model_trained(img):
+    img_array = np.array(img)
+    img_array=img_array.resize(1,64,64,3)
+    model_loaded = load_model('/WEIGHTS/cnn_lstm.h5')
     st.write(model_loaded.summary())
     #model_loaded.predict(image)
 
@@ -129,11 +131,11 @@ if(st.sidebar.button("Predict")):
         
     with col7:
         Prediction_image,image_array,img_64=read_uploaded_image(image_predict)
-        #image_array=resize_image(Prediction_image)
+        
         st.image(Prediction_image, caption='Uploaded Image',use_column_width=True)
 
     with col8:
-       
+       load_model_trained(img_64)
        with st.spinner('Predicting.....'):
            time.sleep(4)
        
