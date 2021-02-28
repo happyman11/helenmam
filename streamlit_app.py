@@ -8,13 +8,12 @@ from PIL import Image
 import time
 import random
 import numpy as np
-import cv2
+
 #functions
 
 def resize_image(img_array):
-      resized_img=cv2.resize(img_array, (64, 64),interpolation = cv2.INTER_NEAREST)
-      image=resized_img.reshape(1,64,64,3)
-      return(image)
+      
+      return(img_array)
     
 def read_image(path):
 
