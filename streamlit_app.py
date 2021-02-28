@@ -27,8 +27,9 @@ def read_image(path):
 def read_uploaded_image(path):
 
     image = Image.open(path)
+    img_64=image.resize((64, 64), Image.ANTIALIAS)
     img_array = np.array(image)
-    return(image,img_array)
+    return(image,img_array,img_64)
 
 st.title("***Radar Based Activity Recognition using CNN-LSTM***")      
 #sidebar
@@ -43,7 +44,6 @@ image_predict = st.sidebar.file_uploader("Upload your input file", type=["png","
 
 
 #dataset display
-
 
 st.subheader('Dataset: INSHEP')
 
@@ -114,6 +114,7 @@ st.subheader('Model: Trainning and Testing')
 with st.spinner('Loading Information..'):
      time.sleep(2)
 
+
 if(st.sidebar.button("Predict")):
     
     col7,col8=st.beta_columns(2)
@@ -121,16 +122,31 @@ if(st.sidebar.button("Predict")):
         time.sleep(5)
         
     with col7:
-        Prediction_image,image_array=read_uploaded_image(image_predict)
-        image_array=resize_image(image_array)
+        Prediction_image,image_array,img_64=read_uploaded_image(image_predict)
+        #image_array=resize_image(Prediction_image)
         st.image(Prediction_image, caption='Uploaded Image',use_column_width=True)
 
     with col8:
        
        with st.spinner('Predicting.....'):
            time.sleep(4)
-       st.image(image_array, caption='Uploaded Image',use_column_width=True)
+       
              
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
