@@ -141,7 +141,7 @@ if(st.sidebar.button("Predict")):
        prediction=load_model_trained(image_predict)
        with st.spinner('Predicting.....'):
            time.sleep(4)
-       st.write(prediction)
+       st.write(prediction[0])
        
              
 
