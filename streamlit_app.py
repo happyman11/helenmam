@@ -9,6 +9,12 @@ import time
 import random
 import numpy as np
 
+from keras.models import load_model
+def load_model_trained(image):
+    model_loaded = load_model('/content/model.h5')
+    st.write(model_loaded.summary())
+    #model_loaded.predict(image)
+
 #functions
 
 def resize_image(img_array):
