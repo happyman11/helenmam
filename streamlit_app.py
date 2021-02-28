@@ -8,14 +8,20 @@ from PIL import Image
 import time
 import random
 import numpy as np
+import cv2
 #functions
 
+def resize_image(img_array):
+      resized_img=cv2.resize(img_array, (64, 64),interpolation = cv2.INTER_NEAREST)
+      image=resized_img.reshape(1,64,64,3)
+      return(image)
+    
 def read_image(path):
 
     image = Image.open(path)
     return(image)
 ##
-st.title("***Radar Based Activity Recognition using CNN-LSTM***")   
+
 
 def read_uploaded_image(path):
 
@@ -23,7 +29,7 @@ def read_uploaded_image(path):
     img_array = np.array(image)
     return(image,img_array)
 
-    
+st.title("***Radar Based Activity Recognition using CNN-LSTM***")      
 #sidebar
 
 #file upload testing
@@ -115,6 +121,7 @@ if(st.sidebar.button("Predict")):
         
     with col7:
         Prediction_image,image_array=read_uploaded_image(image_predict)
+        image_array=resize_image(image_array)
         st.image(Prediction_image, caption='Uploaded Image',use_column_width=True)
 
     with col8:
