@@ -108,36 +108,98 @@ with col6:
    st.image(label6_img, caption='Label: Picking up glass or cup',use_column_width=True)
 
 
+
 #dataset Preprocessing
+
+st.subheader('Flowchart and Featuremaps')
 
 with st.spinner('Loading Preprocessed Dataset....'):
      time.sleep(2)
 
-st.subheader('Dataset: Preprocessing')
+col7,col8 = st.beta_columns(2)
 
 
-#Trainning
+with col7:
+   path_label6="./Images/Label6Surface.jpg"
+   label6_img=read_image(path_label3)
+   st.image(label6_img, caption='Flow of Process',use_column_width=True)
+
+
+with col8:
+   path_label6="./Images/Label6Surface.jpg"
+   label6_img=read_image(path_label3)
+   st.image(label6_img, caption='Featuremaps',use_column_width=True)
+
+
+#MOdel Architechture
 
 
 
-st.subheader('Model: Trainning and Testing')
+st.subheader('CNN-LSTM Model Architechture')
 
 with st.spinner('Loading Information..'):
      time.sleep(2)
 
+col9, col10, col11 = st.beta_columns(3)
+
+
+
+with col9:
+   path_label4="./Images/Label4surface.jpg"
+   label4_img=read_image(path_label4)
+   st.image(label4_img, caption='LSTM architechture',use_column_width=True)
+
+   
+with col10:
+   path_label5="./Images/Label5surface.jpg"
+   label5_img=read_image(path_label5)
+   st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
+
+with col11:
+   path_label6="./Images/Label6Surface.jpg"
+   label6_img=read_image(path_label3)
+   st.image(label6_img, caption='Model Summary and parameters',use_column_width=True)
+
+
+
+
+#Trainning and testing result
+st.subheader('Result of the Proposed Model')
+
+with st.spinner('Loading Information..'):
+     time.sleep(2)
+
+col12, col13 = st.beta_columns(2)
+
+
+
+with col12:
+   path_label4="./Images/Label4surface.jpg"
+   label4_img=read_image(path_label4)
+   st.image(label4_img, caption='LSTM architechture',use_column_width=True)
+
+   
+with col13:
+   path_label5="./Images/Label5surface.jpg"
+   label5_img=read_image(path_label5)
+   st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
+
+
+
+
 
 if(st.sidebar.button("Predict")):
     
-    col7,col8=st.beta_columns(2)
+    col14,col15=st.beta_columns(2)
     with st.spinner('Processing Input..'):
         time.sleep(5)
         
-    with col7:
+    with col14:
         Prediction_image=read_uploaded_image(image_predict)
         
         st.image(Prediction_image, caption='Uploaded Image',use_column_width=True)
 
-    with col8:
+    with col15:
        prediction=load_model_trained(image_predict)
        with st.spinner('Predicting.....'):
            time.sleep(4)
@@ -193,8 +255,8 @@ if(st.sidebar.button("Predict")):
 
 
 
-col10, col11= st.beta_columns(2)
-with col10:
+col16, col17= st.beta_columns(2)
+with col16:
 
 
 
@@ -219,7 +281,7 @@ with col10:
 """
 )
 
-with col11:
+with col17:
   
     components.html(
     """
