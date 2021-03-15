@@ -120,7 +120,7 @@ col7,col8 = st.beta_columns(2)
 
 
 with col7:
-   path_label6="./Images/Label6Surface.jpg"
+   path_label6="./Images/Capture1.PNG"
    label6_img=read_image(path_label3)
    st.image(label6_img, caption='Flow of Process',use_column_width=True)
 
@@ -145,18 +145,18 @@ col9, col10, col11 = st.beta_columns(3)
 
 
 with col9:
-   path_label4="./Images/Label4surface.jpg"
+   path_label4="./Images/Capture.PNG"
    label4_img=read_image(path_label4)
    st.image(label4_img, caption='LSTM architechture',use_column_width=True)
 
    
 with col10:
-   path_label5="./Images/Label5surface.jpg"
+   path_label5="./Images/image.0.png"
    label5_img=read_image(path_label5)
    st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
 
 with col11:
-   path_label6="./Images/Label6Surface.jpg"
+   path_label6="./Images/Capture3.PNG"
    label6_img=read_image(path_label3)
    st.image(label6_img, caption='Model Summary and parameters',use_column_width=True)
 
@@ -174,13 +174,13 @@ col12, col13 = st.beta_columns(2)
 
 
 with col12:
-   path_label4="./Images/Label4surface.jpg"
+   path_label4="./Images/image.2.png"
    label4_img=read_image(path_label4)
    st.image(label4_img, caption='LSTM architechture',use_column_width=True)
 
    
 with col13:
-   path_label5="./Images/Label5surface.jpg"
+   path_label5="./Images/image.4.png"
    label5_img=read_image(path_label5)
    st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
 
