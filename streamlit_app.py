@@ -185,7 +185,7 @@ with col13:
 
 
 if(st.sidebar.button("Predict")):
-    
+    st.sidebar.header("Prediction from Model)
     col14,col15=st.beta_columns(2)
     with st.spinner('Processing Input..'):
         time.sleep(5)
