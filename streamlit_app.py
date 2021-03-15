@@ -126,9 +126,9 @@ with col7:
 
 
 with col8:
-   path_label8="./Images/Label6Surface.jpg"
+   path_label8="./Images/image.0.png"
    label8_img=read_image(path_label8)
-   st.image(label8_img, caption='Featuremaps',use_column_width=True)
+   st.image(label8_img, caption='CNN-LSTM Network',use_column_width=True)
 
 
 #MOdel Architechture
