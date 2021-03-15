@@ -248,6 +248,7 @@ if(st.sidebar.button("Predict")):
 
 
 
+st.text("")
 
 
 
