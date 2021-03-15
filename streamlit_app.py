@@ -120,15 +120,15 @@ col7,col8 = st.beta_columns(2)
 
 
 with col7:
-   path_label6="./Images/Capture1.PNG"
-   label6_img=read_image(path_label3)
-   st.image(label6_img, caption='Flow of Process',use_column_width=True)
+   path_label7="./Images/Capture1.PNG"
+   label7_img=read_image(path_label7)
+   st.image(label7_img, caption='Flow of Process',use_column_width=True)
 
 
 with col8:
-   path_label6="./Images/Label6Surface.jpg"
-   label6_img=read_image(path_label3)
-   st.image(label6_img, caption='Featuremaps',use_column_width=True)
+   path_label8="./Images/Label6Surface.jpg"
+   label8_img=read_image(path_label8)
+   st.image(label8_img, caption='Featuremaps',use_column_width=True)
 
 
 #MOdel Architechture
@@ -153,7 +153,7 @@ with col9:
 
 with col11:
    path_label6="./Images/Capture3.PNG"
-   label6_img=read_image(path_label3)
+   label6_img=read_image(path_label6)
    st.image(label6_img, caption='Model Summary and parameters',use_column_width=True)
 
 
