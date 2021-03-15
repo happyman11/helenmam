@@ -250,7 +250,7 @@ if(st.sidebar.button("Predict")):
 
 st.text("")
 
-
+st.text("")
 
 col16, col17= st.beta_columns(2)
 with col16:
