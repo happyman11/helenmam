@@ -140,7 +140,7 @@ st.subheader('CNN-LSTM Model Architechture')
 with st.spinner('Loading Information..'):
      time.sleep(2)
 
-col9, col10, col11 = st.beta_columns(3)
+col9, col11 = st.beta_columns(2)
 
 
 
@@ -149,11 +149,7 @@ with col9:
    label4_img=read_image(path_label4)
    st.image(label4_img, caption='LSTM architechture',use_column_width=True)
 
-   
-with col10:
-   path_label5="./Images/image.0.png"
-   label5_img=read_image(path_label5)
-   st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
+  
 
 with col11:
    path_label6="./Images/Capture3.PNG"
@@ -176,13 +172,13 @@ col12, col13 = st.beta_columns(2)
 with col12:
    path_label4="./Images/image.2.png"
    label4_img=read_image(path_label4)
-   st.image(label4_img, caption='LSTM architechture',use_column_width=True)
+   st.image(label4_img, caption='Model Loss',use_column_width=True)
 
    
 with col13:
    path_label5="./Images/image.4.png"
    label5_img=read_image(path_label5)
-   st.image(label5_img, caption='LSTM-CNN Proposed Model',use_column_width=True)
+   st.image(label5_img, caption='Model Accuracy',use_column_width=True)
 
 
 
