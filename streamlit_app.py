@@ -16,7 +16,7 @@ def load_model_trained(path):
     zee1=np.asarray(resizedImage)
     zee1=zee1.reshape(1,64,64,3)
     model_loaded = load_model('./WEIGHTS/cnn_lstm.h5')
-    st.write(model_loaded.summary())
+   
     prediction=model_loaded.predict(zee1)
     
     return(prediction)
@@ -199,7 +199,7 @@ if(st.sidebar.button("Predict")):
        prediction=load_model_trained(image_predict)
        with st.spinner('Predicting.....'):
            time.sleep(4)
-       st.write(prediction[0])
+       st.write(prediction)
        
              
 
