@@ -111,7 +111,7 @@ with col6:
 
 #dataset Preprocessing
 
-st.subheader('Flowchart and Featuremaps')
+st.subheader('Flowchart ')
 
 with st.spinner('Loading Preprocessed Dataset....'):
      time.sleep(2)
