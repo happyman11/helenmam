@@ -51,7 +51,7 @@ st.sidebar.header("Activity Prediction")
 
 
 st.sidebar.subheader("Upload Image")
-image_predict = st.sidebar.file_uploader("Upload your input file", type=["png","jpg","jpeg"])
+image_predict = st.sidebar.file_uploader("Upload your input file", type=["jpg"])
 
 
 #dataset display
